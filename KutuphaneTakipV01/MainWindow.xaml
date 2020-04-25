@@ -1,0 +1,205 @@
+﻿<Window x:Class="KutuphaneTakipV01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KutuphaneTakipV01"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="900" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" AllowsTransparency="True" WindowStyle="None" >
+    <Grid Margin="5" >
+        <Grid.Effect>
+            <DropShadowEffect BlurRadius="10" Direction="265" Opacity="0.48" ShadowDepth="4"/>
+        </Grid.Effect>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0"/>
+            <RowDefinition Height="169.6"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <!-- Logo ve Buton-->
+        <Border Background="#134187" Grid.Column="0" Grid.Row="0" Margin="0,0,0,399.6" Grid.RowSpan="3" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0">
+                    <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Image Source="Image/Icon/adam.png" Height="24" Width="24"/>
+                        <Label Content="KÜTÜPHANE PROGRAMI" Foreground="White" FontWeight="Bold" FontSize="9" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </DockPanel>
+                </Border>
+
+                
+
+                <Border Grid.Row="1">
+
+                    <Border.Style>
+                        <Style TargetType="Border">
+                            <Setter Property="Background" Value="#134187"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#3F5F96CF"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Border.Style>
+
+                    <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Image >
+                            <Image.Style>
+                                <Style TargetType="Image">
+                                    <Setter Property="Source" Value="Image/Icon/document.png"/>
+                                    <Setter Property="Height" Value="Auto"/>
+                                    <Setter Property="Width" Value="100"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Source" Value="Image/Icon/document.png"/>
+                                            <Setter Property="Width" Value="105"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Image.Style>
+
+                        </Image>
+
+                    </DockPanel>
+                </Border>
+
+            </Grid>
+
+        </Border>
+        <!-- Mini Butonlar ve Header-->
+        <Border Background="#134187" Grid.Column="1" Grid.Row="0" x:Name="Sagust" MouseDown="Sagust_MouseDown" Margin="0,0,-0.4,399.6" Grid.RowSpan="3" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Border Background="White" Grid.Row="0">
+                    <DockPanel Width="72" HorizontalAlignment="Right">
+                        <Button Content="__" Style="{DynamicResource minibutonlar}" FontSize="12"/>
+                        <Button Content="x" x:Name="btn_kapat" Click="btn_kapat_Click" Style="{DynamicResource minibutonlar}" FontSize="12"/>
+                    </DockPanel>
+                </Border>
+                <Border Grid.Row="1" Background="#134187">
+                    <Border.Effect>
+                        <DropShadowEffect Direction="221" Opacity="0.2"/>
+                    </Border.Effect>
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Border Grid.Column="0">
+                            <StackPanel VerticalAlignment="Center" Margin="30,0,0,0">
+                                <DockPanel>
+                                    <Label Content="Toplam Kitap Sayısı : " Foreground="White" FontSize="18"/>
+                                    <Label Content="1024 " Foreground="#FF33FD45" FontSize="18"/>
+                                </DockPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <DockPanel>
+                                        <Label Content="Emanet Sayısı : " Foreground="White" FontSize="14"/>
+                                        <Label Content="124 " Foreground="#FF33FD45" FontSize="14"/>
+                                    </DockPanel>
+                                    <DockPanel>
+                                        <Label Content="Süresi Dolan : " Foreground="White" FontSize="14"/>
+                                        <Label Content="14 " Foreground="#FFFD8787" FontSize="14"/>
+                                    </DockPanel>
+                                </StackPanel>
+                                
+                            </StackPanel>
+                        </Border>
+                        <Border Grid.Column="1">
+                            <Border Width="220" Height="120" CornerRadius="10,10,10,10" Background="#4C08316E">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="Image/Icon/person.png" Width="100"/>
+                                    <StackPanel VerticalAlignment="Center" Margin="3,0,0,0">
+                                        <Label Content="Ahmet OKU" Background="#FF84A7F1" Foreground="White" FontWeight="Bold" />
+                                        <Label Content="Yönetici" Background="#FF224059" Foreground="White" FontWeight="Bold" />
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+
+                        </Border>
+
+                    </Grid>
+
+                </Border>
+
+            </Grid>
+        </Border>
+        <!-- Menu Butonlar ve Header-->
+        <Border Background="#134187" Grid.Column="0" Grid.Row="2" Margin="0,0.4,0,-0.4" >
+            <StackPanel HorizontalAlignment="Left">
+                <Button Height="50" Style="{DynamicResource menubutonlar}">
+                    <DockPanel Width="220" Margin="15,0,0,0">
+                        <Image Source="Image/Icon/liste3.png" Width="32"/>
+                        <Label Content="Kitap Listesi" Foreground="White"/>
+                    </DockPanel>
+                </Button>
+                <Button Height="50" Style="{DynamicResource menubutonlar}">
+                    <DockPanel Width="220" Margin="15,0,0,0">
+                        <Image Source="Image/Icon/okuyan.png" Width="32"/>
+                        <Label Content="Okuyucu Listesi" Foreground="White"/>
+                    </DockPanel>
+                </Button>
+                <Button Height="50" Style="{DynamicResource menubutonlar}">
+                    <DockPanel Width="220" Margin="15,0,0,0">
+                        <Image Source="Image/Icon/kitaplar.png" Width="32"/>
+                        <Label Content="Emanet Listesi" Foreground="White"/>
+                    </DockPanel>
+                </Button>
+                <Button Height="50" Style="{DynamicResource menubutonlar}">
+                    <DockPanel Width="220" Margin="15,0,0,0">
+                        <Image Source="Image/Icon/takvim.png" Width="32"/>
+                        <Label Content="Zamanı Dolanlar" Foreground="White"/>
+                    </DockPanel>
+                </Button>
+                <Button Height="50" Style="{DynamicResource menubutonlar}">
+                    <DockPanel Width="220" Margin="15,0,0,0">
+                        <Image Source="Image/Icon/ayarlar.png" Width="32"/>
+                        <Label Content="Ayarlar" Foreground="White"/>
+                    </DockPanel>
+                </Button>
+                <Button Height="50" Style="{DynamicResource menubutonlar}">
+                    <DockPanel Width="220" Margin="15,0,0,0">
+                        <Image Source="Image/Icon/book.png" Width="32"/>
+                        <Label Content="Hakkında" Foreground="White"/>
+                    </DockPanel>
+                </Button>
+
+                <Canvas>
+                    <Border Canvas.Left="67" Canvas.Top="84" CornerRadius="10,10,10,10" Width="85" Cursor="Hand">
+                        <Label Content="10.0.0.1" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+
+                        <Border.Style>
+                            <Style TargetType="Border">
+                                <Setter Property="Background" Value="#99053D76"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#FF053D76"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+
+                    </Border>
+                </Canvas>
+            </StackPanel>
+
+        </Border>
+
+        <!--Content İçerik-->
+        <Border Grid.Column="1" Grid.Row="2" Background="#FFEEEEEE"  >
+
+        </Border>
+
+    </Grid>
+</Window>
