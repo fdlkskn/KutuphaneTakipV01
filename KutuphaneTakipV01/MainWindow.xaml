@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KutuphaneTakipV01"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="900" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" AllowsTransparency="True" WindowStyle="None" >
+        Title="MainWindow" Height="600" Width="900" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" AllowsTransparency="True" WindowStyle="None" Loaded="Window_Loaded" >
     <Grid Margin="5" >
         <Grid.Effect>
             <DropShadowEffect BlurRadius="10" Direction="265" Opacity="0.48" ShadowDepth="4"/>
@@ -138,8 +138,8 @@
         </Border>
         <!-- Menu Butonlar ve Header-->
         <Border Background="#134187" Grid.Column="0" Grid.Row="2" Margin="0,0.4,0,-0.4" >
-            <StackPanel HorizontalAlignment="Left">
-                <Button Height="50" Style="{DynamicResource menubutonlar}">
+            <StackPanel >
+                <Button Height="50" Style="{DynamicResource menubutonlar}" HorizontalAlignment="Left" x:Name="menubuton_kitaplistesi" Click="menubuton_kitaplistesi_Click">
                     <DockPanel Width="220" Margin="15,0,0,0">
                         <Image Source="Image/Icon/liste3.png" Width="32"/>
                         <Label Content="Kitap Listesi" Foreground="White"/>
@@ -199,6 +199,9 @@
 
         <!--Content İçerik-->
         <Border Grid.Column="1" Grid.Row="2" Background="#FFEEEEEE"  >
+            <Grid x:Name="Content_icerik">
+                
+            </Grid>
 
         </Border>
 

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using KutuphaneTakipV01.Classlar;
+using KutuphaneTakipV01.Image.UKontroller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,6 +36,16 @@ namespace KutuphaneTakipV01
         {
             if (Mouse.LeftButton == MouseButtonState.Pressed)
                 this.DragMove();
+        }
+
+        private void menubuton_kitaplistesi_Click(object sender, RoutedEventArgs e)
+        {
+            uc_cagir.Uc_Ekle(Content_icerik,new ucKitapListesi());
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            uc_cagir.Uc_Ekle(Content_icerik, new ucKitapListesi());
         }
     }
 }
