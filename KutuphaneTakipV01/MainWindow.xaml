@@ -201,7 +201,7 @@
         <Border Grid.Column="1" Grid.Row="2" Background="#FFEEEEEE"  >
             <Grid x:Name="Content_icerik">
                 
-                            </Grid>
+            </Grid>
 
         </Border>
 
