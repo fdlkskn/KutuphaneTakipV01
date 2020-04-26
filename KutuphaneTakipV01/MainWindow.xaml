@@ -15,7 +15,7 @@
             <RowDefinition Height="0"/>
             <RowDefinition Height="169.6"/>
             <RowDefinition/>
-            
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="220"/>
@@ -36,7 +36,7 @@
                     </DockPanel>
                 </Border>
 
-                
+
 
                 <Border Grid.Row="1">
 
@@ -114,7 +114,7 @@
                                         <Label Content="14 " Foreground="#FFFD8787" FontSize="14"/>
                                     </DockPanel>
                                 </StackPanel>
-                                
+
                             </StackPanel>
                         </Border>
                         <Border Grid.Column="1">
@@ -177,8 +177,8 @@
                 </Button>
 
                 <Canvas>
-                    <Border Canvas.Left="67" Canvas.Top="84" CornerRadius="10,10,10,10" Width="85" Cursor="Hand">
-                        <Label Content="10.0.0.1" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+                    <Border Canvas.Left="30" Canvas.Top="74" CornerRadius="10,10,10,10" Width="162" Cursor="Hand" Height="30">
+                        <Label Content="10.0.0.1" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="Versiyon"  />
 
                         <Border.Style>
                             <Style TargetType="Border">
@@ -200,7 +200,7 @@
         <!--Content İçerik-->
         <Border Grid.Column="1" Grid.Row="2" Background="#FFEEEEEE"  >
             <Grid x:Name="Content_icerik">
-                
+
             </Grid>
 
         </Border>

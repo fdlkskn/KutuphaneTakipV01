@@ -46,6 +46,8 @@ namespace KutuphaneTakipV01
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             uc_cagir.Uc_Ekle(Content_icerik, new ucKitapListesi());
+            DBbaglanti.BagTest();
+            Versiyon.Content = DBbaglanti.BagDurum;
         }
     }
 }
