@@ -40,7 +40,7 @@ namespace KutuphaneTakipV01
 
         private void menubuton_kitaplistesi_Click(object sender, RoutedEventArgs e)
         {
-            uc_cagir.Uc_Ekle(Content_icerik,new ucKitapListesi());
+            uc_cagir.Uc_Ekle(Content_icerik, new ucKitapListesi());
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -48,6 +48,23 @@ namespace KutuphaneTakipV01
             uc_cagir.Uc_Ekle(Content_icerik, new ucKitapListesi());
             DBbaglanti.BagTest();
             Versiyon.Content = DBbaglanti.BagDurum;
+        }
+
+        private void btn_SimgeDurumu_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void btn_TamEkran_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.WindowState == WindowState.Normal)
+            {
+                this.WindowState = WindowState.Maximized;
+            }
+            else
+            {
+                this.WindowState = WindowState.Normal;
+            }
         }
     }
 }

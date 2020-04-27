@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KutuphaneTakipV01"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="900" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" AllowsTransparency="True" WindowStyle="None" Loaded="Window_Loaded" >
-    <Grid Margin="5" >
+        Title="MainWindow" Height="600" Width="900" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" AllowsTransparency="True" WindowStyle="None" Loaded="Window_Loaded" Icon="Image/Icon/kitaplar.png" >
+    <Grid Margin="5" x:Name="grd_AnaGridWindow" >
         <Grid.Effect>
             <DropShadowEffect BlurRadius="10" Direction="265" Opacity="0.48" ShadowDepth="4"/>
         </Grid.Effect>
@@ -83,8 +83,9 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 <Border Background="White" Grid.Row="0">
-                    <DockPanel Width="72" HorizontalAlignment="Right">
-                        <Button Content="__" Style="{DynamicResource minibutonlar}" FontSize="12"/>
+                    <DockPanel Width="108" HorizontalAlignment="Right">
+                        <Button Content="__" Style="{DynamicResource minibutonlar}" FontSize="12" x:Name="btn_SimgeDurumu" Click="btn_SimgeDurumu_Click"/>
+                        <Button Content="[   ]" Style="{DynamicResource minibutonlar}" FontSize="12" x:Name="btn_TamEkran" Click="btn_TamEkran_Click"/>
                         <Button Content="x" x:Name="btn_kapat" Click="btn_kapat_Click" Style="{DynamicResource minibutonlar}" FontSize="12"/>
                     </DockPanel>
                 </Border>
@@ -95,7 +96,7 @@
                     <Grid >
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
-                            <ColumnDefinition/>
+                            <ColumnDefinition Width="350"/>
                         </Grid.ColumnDefinitions>
 
                         <Border Grid.Column="0">
@@ -118,7 +119,7 @@
                             </StackPanel>
                         </Border>
                         <Border Grid.Column="1">
-                            <Border Width="220" Height="120" CornerRadius="10,10,10,10" Background="#4C08316E">
+                            <Border Width="220" Height="120" CornerRadius="10,10,10,10" >
                                 <StackPanel Orientation="Horizontal">
                                     <Image Source="Image/Icon/person.png" Width="100"/>
                                     <StackPanel VerticalAlignment="Center" Margin="3,0,0,0">
@@ -138,7 +139,13 @@
         </Border>
         <!-- Menu Butonlar ve Header-->
         <Border Background="#134187" Grid.Column="0" Grid.Row="2" Margin="0,0.4,0,-0.4" >
-            <StackPanel >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="128"/>
+                </Grid.RowDefinitions>
+            
+            <StackPanel Grid.Row="0">
                 <Button Height="50" Style="{DynamicResource menubutonlar}" HorizontalAlignment="Left" x:Name="menubuton_kitaplistesi" Click="menubuton_kitaplistesi_Click">
                     <DockPanel Width="220" Margin="15,0,0,0">
                         <Image Source="Image/Icon/liste3.png" Width="32"/>
@@ -175,6 +182,8 @@
                         <Label Content="Hakkında" Foreground="White"/>
                     </DockPanel>
                 </Button>
+                </StackPanel>
+                    <StackPanel Grid.Row="1">
 
                 <Canvas>
                     <Border Canvas.Left="30" Canvas.Top="74" CornerRadius="10,10,10,10" Width="162" Cursor="Hand" Height="30">
@@ -194,7 +203,7 @@
                     </Border>
                 </Canvas>
             </StackPanel>
-
+            </Grid>
         </Border>
 
         <!--Content İçerik-->
