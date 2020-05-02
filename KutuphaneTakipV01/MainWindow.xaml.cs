@@ -47,7 +47,7 @@ namespace KutuphaneTakipV01
         {
             uc_cagir.Uc_Ekle(Content_icerik, new ucKitapListesi());
             DBbaglanti.BagTest();
-            Versiyon.Content = DBbaglanti.BagDurum;
+            
         }
 
         private void btn_SimgeDurumu_Click(object sender, RoutedEventArgs e)
@@ -65,6 +65,43 @@ namespace KutuphaneTakipV01
             {
                 this.WindowState = WindowState.Normal;
             }
+        }
+
+        private void btn_hamburgerMenu_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (btn_hamburgerMenu.Width != 60) 
+            {
+                GridLength grd = new GridLength(80, GridUnitType.Pixel);
+                grdClmn_menu.Width = grd;
+
+                lbl_menu1.Visibility = Visibility.Hidden;
+                lbl_menu2.Visibility = Visibility.Hidden;
+                lbl_menu3.Visibility = Visibility.Hidden;
+                lbl_menu4.Visibility = Visibility.Hidden;
+                lbl_menu5.Visibility = Visibility.Hidden;
+                lbl_menu6.Visibility = Visibility.Hidden;
+
+                lbl_logoyazi.Width = 0;
+                btn_hamburgerMenu.Width = 60;
+                menu_altlabel_border.Visibility = Visibility.Hidden;
+            }else
+            {
+                GridLength grd = new GridLength(220, GridUnitType.Pixel);
+                grdClmn_menu.Width = grd;
+
+                lbl_menu1.Visibility = Visibility.Visible;
+                lbl_menu2.Visibility = Visibility.Visible;
+                lbl_menu3.Visibility = Visibility.Visible;
+                lbl_menu4.Visibility = Visibility.Visible;
+                lbl_menu5.Visibility = Visibility.Visible;
+                lbl_menu6.Visibility = Visibility.Visible;
+
+                lbl_logoyazi.Width = 150;
+                btn_hamburgerMenu.Width = 100;
+                menu_altlabel_border.Visibility = Visibility.Visible;
+            }
+            
+            
         }
     }
 }
