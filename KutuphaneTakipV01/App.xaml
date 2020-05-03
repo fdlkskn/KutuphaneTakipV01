@@ -105,7 +105,22 @@
             </Setter>
 
         </Style>
-       
+
+        <!--uc Butonlar-->
+        <Style x:Key="MouseOverImageChange_Tetbox" TargetType="{x:Type TextBox}">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="BorderThickness" Value="0,0,0,1"/>
+            <Setter Property="BorderBrush" Value="#FF032D6C"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FFEFF4FD"/>
+                    <Setter Property="BorderBrush" Value="#FF2F5DAC"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
 
     </Application.Resources>
 </Application>

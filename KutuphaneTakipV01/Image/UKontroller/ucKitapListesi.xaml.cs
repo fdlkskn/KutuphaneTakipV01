@@ -24,5 +24,14 @@ namespace KutuphaneTakipV01.Image.UKontroller
         {
             InitializeComponent();
         }
+        MainWindow gk = (MainWindow)Application.Current.Windows.OfType<Window>().SingleOrDefault(x => x.IsActive);
+        private void btn_KitapEkle_Click(object sender, RoutedEventArgs e)
+        {
+
+            winKitapEkle ekle = new winKitapEkle();
+            ekle.Owner = gk;
+            gk.Opacity = 0.3;
+            ekle.ShowDialog();
+        }
     }
 }

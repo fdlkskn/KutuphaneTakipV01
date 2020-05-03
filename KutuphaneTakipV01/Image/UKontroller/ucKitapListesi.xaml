@@ -13,7 +13,7 @@
         </Grid.RowDefinitions >
 
         <Border Grid.Row="0">
-            <DataGrid BorderBrush="{x:Null}" BorderThickness="0" Background="#FFC73A3A">
+            <DataGrid BorderBrush="{x:Null}" BorderThickness="0" Background="LightGray">
                 
             </DataGrid>
         </Border>
@@ -22,8 +22,8 @@
         <Border Background="White" Grid.Row="1">
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Style="{DynamicResource userKontrolKitapButon}" Content="Kitap Ekle"></Button>
-                <Button Style="{DynamicResource userKontrolKitapButon}" Content="Kitap Ekle"></Button>
+                <Button Style="{DynamicResource userKontrolKitapButon}" Content="Kitap Ekle" x:Name="btn_KitapEkle" Click="btn_KitapEkle_Click"></Button>
+                
             </StackPanel>
             
         </Border>
