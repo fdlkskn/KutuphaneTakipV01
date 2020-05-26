@@ -32,7 +32,137 @@
 
             <!--Texbox ve Labeller-->
             <Label Content="BARKOD" Canvas.Left="271" Canvas.Top="121" Width="90" Background="#FF134187" Foreground="White"/>
-            <TextBox Width="131" Canvas.Left="366" Canvas.Top="121" Height="26"  Style="{DynamicResource MouseOverImageChange_Tetbox}"/>
+            <TextBox Width="120" Canvas.Left="366" Canvas.Top="121" Height="26"  Style="{DynamicResource MouseOverImageChange_Tetbox}"/>
+            <Label Content="KİTAP ADI" Canvas.Left="271" Canvas.Top="151" Width="90" Background="#FF134187" Foreground="White" BorderBrush="#FF134187"/>
+            <ComboBox Canvas.Left="366" Canvas.Top="186" Width="120" Style="{DynamicResource ComboBoxFlatStyle}" SelectionChanged="ComboBox_SelectionChanged" >
+                <ComboBoxItem Name="cbi13">Item1</ComboBoxItem>
+                <ComboBoxItem Name="cbi23">Item2</ComboBoxItem>
+                <ComboBoxItem Name="cbi33">Item3</ComboBoxItem>
+            </ComboBox>
+            <Label Content="YAYIN EVİ" Canvas.Left="271" Canvas.Top="213" Width="90" Background="#FF134187" Foreground="White"/>
+            <DatePicker Canvas.Left="366" Canvas.Top="274" Width="120" BorderThickness="0,0,0,1" Foreground="#FF134187" BorderBrush="#FF134187" Background="White" RenderTransformOrigin="1.903,1.607"/>
+            <TextBox Width="120" Canvas.Left="366" Canvas.Top="152" Height="26"  Style="{DynamicResource MouseOverImageChange_Tetbox}"/>
+            <Label Content="YAZARI" Canvas.Left="271" Canvas.Top="182" Width="90" Background="#FF134187" Foreground="White" BorderBrush="#FF134187"/>
+            <ComboBox Canvas.Left="366" Canvas.Top="216" Width="120" Style="{DynamicResource ComboBoxFlatStyle}" SelectionChanged="ComboBox_SelectionChanged" >
+                <ComboBoxItem x:Name="cbi1" Content="Item1"/>
+                <ComboBoxItem x:Name="cbi2" Content="Item2"/>
+                <ComboBoxItem x:Name="cbi3" Content="Item3"/>
+            </ComboBox>
+            <ComboBox Canvas.Left="366" Canvas.Top="246" Width="120" Style="{DynamicResource ComboBoxFlatStyle}" SelectionChanged="ComboBox_SelectionChanged" >
+                <ComboBoxItem x:Name="cbi4" Content="Item1"/>
+                <ComboBoxItem x:Name="cbi5" Content="Item2"/>
+                <ComboBoxItem x:Name="cbi6" Content="Item3"/>
+            </ComboBox>
+            <Label Content="BASKI YERİ" Canvas.Left="271" Canvas.Top="243" Width="90" Background="#FF134187" Foreground="White"/>
+            <TextBox Width="120" Canvas.Left="366" Canvas.Top="301" Height="26"  Style="{DynamicResource MouseOverImageChange_Tetbox}"/>
+            <Label Content="BASKI TARİHİ" Canvas.Left="271" Canvas.Top="271" Width="90" Background="#FF134187" Foreground="White"/>
+            <Label Content="BASKI SAYISI" Canvas.Left="270" Canvas.Top="299" Width="90" Background="#FF134187" Foreground="White"/>
+
+
+
+        </Canvas>
+        <Canvas>
+            <Image Source="Image/Icon/kitaplar.png" Height="65" Width="65" Canvas.Left="225" Canvas.Top="33" Panel.ZIndex="3"/>
+            <Label Content="KİTAP EKLEME PENCERESİ" Canvas.Left="315" Canvas.Top="51" Width="197" Height="33" Foreground="White" Panel.ZIndex="3" FontWeight="Bold" 
+                HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+            <Rectangle Height="33" Width="650" Canvas.Left="240" Canvas.Top="51" Fill="#FF134187" Panel.ZIndex="1"/>
+            <Ellipse Height="111" Width="108" Canvas.Left="195" Canvas.Top="10" Panel.ZIndex="2" StrokeThickness="4" >
+                <Ellipse.Fill>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FF137187" Offset="0.963"/>
+                        <GradientStop Color="White" Offset="0.983"/>
+                        <GradientStop Color="#FFF1F2F3" Offset="0.937"/>
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+
+
+            </Ellipse>
+
+            <Border Height="331" Width="650" Canvas.Left="240" Canvas.Top="51" Background="#FFE0E0E0" CornerRadius="0,0,50,50">
+                <Border.Effect>
+                    <DropShadowEffect Direction="275" Opacity="0.35"/>
+                </Border.Effect>
+            </Border>
+
+            <!--Texbox ve Labeller-->
+            <Label Content="BARKOD" Canvas.Left="271" Canvas.Top="121" Width="90" Background="#FF134187" Foreground="White"/>
+            <TextBox Width="101" Canvas.Left="366" Canvas.Top="121" Height="26"  Style="{DynamicResource MouseOverImageChange_Tetbox}"/>
+            <Label Content="KİTAP ADI" Canvas.Left="271" Canvas.Top="151" Width="90" Background="#FF134187" Foreground="White" BorderBrush="#FF134187"/>
+            <ComboBox Canvas.Left="366" Canvas.Top="186" Width="101" Style="{DynamicResource ComboBoxFlatStyle}" SelectionChanged="ComboBox_SelectionChanged" >
+                <ComboBoxItem x:Name="cbi7" Content="Item1"/>
+                <ComboBoxItem x:Name="cbi8" Content="Item2"/>
+                <ComboBoxItem x:Name="cbi9" Content="Item3"/>
+            </ComboBox>
+            <Label Content="YAYIN EVİ" Canvas.Left="271" Canvas.Top="213" Width="90" Background="#FF134187" Foreground="White"/>
+            <DatePicker Canvas.Left="366" Canvas.Top="274" Width="101" BorderThickness="0,0,0,1" Foreground="#FF134187" BorderBrush="#FF134187" Background="White" RenderTransformOrigin="1.903,1.607"/>
+            <TextBox Width="101" Canvas.Left="366" Canvas.Top="152" Height="26"  Style="{DynamicResource MouseOverImageChange_Tetbox}"/>
+            <Label Content="YAZARI" Canvas.Left="271" Canvas.Top="182" Width="90" Background="#FF134187" Foreground="White" BorderBrush="#FF134187"/>
+            <ComboBox Canvas.Left="366" Canvas.Top="216" Width="101" Style="{DynamicResource ComboBoxFlatStyle}" SelectionChanged="ComboBox_SelectionChanged" >
+                <ComboBoxItem x:Name="cbi10" Content="Item1"/>
+                <ComboBoxItem x:Name="cbi11" Content="Item2"/>
+                <ComboBoxItem x:Name="cbi12" Content="Item3"/>
+            </ComboBox>
+            <ComboBox Canvas.Left="366" Canvas.Top="246" Width="101" Style="{DynamicResource ComboBoxFlatStyle}" SelectionChanged="ComboBox_SelectionChanged" >
+                <ComboBoxItem x:Name="cbi14" Content="Item1"/>
+                <ComboBoxItem x:Name="cbi15" Content="Item2"/>
+                <ComboBoxItem x:Name="cbi16" Content="Item3"/>
+            </ComboBox>
+            <Label Content="BASKI YERİ" Canvas.Left="271" Canvas.Top="243" Width="90" Background="#FF134187" Foreground="White"/>
+            <TextBox Width="101" Canvas.Left="366" Canvas.Top="301" Height="26"  Style="{DynamicResource MouseOverImageChange_Tetbox}" x:Name="txt_BaskiSayisi" 
+                     PreviewTextInput="txt_BaskiSayisi_PreviewTextInput"/>
+            <Label Content="BASKI TARİHİ" Canvas.Left="271" Canvas.Top="271" Width="90" Background="#FF134187" Foreground="White"/>
+            <Label Content="BASKI SAYISI" Canvas.Left="270" Canvas.Top="299" Width="90" Background="#FF134187" Foreground="White"/>
+
+
+
+            <Label Content="BARKOD" Canvas.Left="271.2" Canvas.Top="120.8" Width="90" Background="#FF134187" Foreground="White"/>
+            <Label Content="KİTAP TÜRÜ" Canvas.Left="482" Canvas.Top="121" Width="90" Background="#FF134187" Foreground="White"/>
+            <Label Content="SAYFA SAYISI" Canvas.Left="482" Canvas.Top="152" Width="90" Background="#FF134187" Foreground="White"/>
+            <TextBox Width="101" Canvas.Left="572" Canvas.Top="152" Height="26"  Style="{DynamicResource MouseOverImageChange_Tetbox}" x:Name="txt_SayfaSayisi" PreviewTextInput="txt_SayfaSayisi_PreviewTextInput"/>
+            <Label Content="TEMİN TÜRÜ" Canvas.Left="482" Canvas.Top="182" Width="90" Background="#FF134187" Foreground="White"/>
+            <Label Content="TEMİN TARİHİ" Canvas.Left="482" Canvas.Top="212" Width="90" Background="#FF134187" Foreground="White"/>
+            <ComboBox Canvas.Left="572" Canvas.Top="125" Width="101" Style="{DynamicResource ComboBoxFlatStyle}" SelectionChanged="ComboBox_SelectionChanged" >
+                <ComboBoxItem x:Name="cbi17" Content="Item1"/>
+                <ComboBoxItem x:Name="cbi18" Content="Item2"/>
+                <ComboBoxItem x:Name="cbi19" Content="Item3"/>
+            </ComboBox>
+            <ComboBox Canvas.Left="572" Canvas.Top="185" Width="101" Style="{DynamicResource ComboBoxFlatStyle}" SelectionChanged="ComboBox_SelectionChanged" >
+                <ComboBoxItem x:Name="cbi20" Content="Item1"/>
+                <ComboBoxItem x:Name="cbi21" Content="Item2"/>
+                <ComboBoxItem x:Name="cbi22" Content="Item3"/>
+            </ComboBox>
+            <DatePicker Canvas.Left="572" Canvas.Top="216" Width="101" BorderThickness="0,0,0,1" Foreground="#FF134187" BorderBrush="#FF134187" Background="White" RenderTransformOrigin="1.903,1.607"/>
+            <Label Content="DİLİ" Canvas.Left="482" Canvas.Top="244" Width="90" Background="#FF134187" Foreground="White"/>
+            <ComboBox Canvas.Left="572" Canvas.Top="246" Width="101" Style="{DynamicResource ComboBoxFlatStyle}" SelectionChanged="ComboBox_SelectionChanged" >
+                <ComboBoxItem x:Name="cbi24" Content="Item1"/>
+                <ComboBoxItem x:Name="cbi25" Content="Item2"/>
+                <ComboBoxItem x:Name="cbi26" Content="Item3"/>
+            </ComboBox>
+            <Label Content="KONUSU" Canvas.Left="482" Canvas.Top="275" Width="90" Background="#FF134187" Foreground="White" x:Name="txt_Konusu"/>
+            <TextBox Width="101" Canvas.Left="572" Canvas.Top="275" Height="52"  Style="{DynamicResource MouseOverImageChange_Tetbox}"/>
+            <!--Resim-->
+            <Image Source="Image/Icon/okuyan.png" Canvas.Left="744" Canvas.Top="121" Height="117" Width="86"/>
+            <Ellipse Height="9" Width="134" Canvas.Left="719" Canvas.Top="260">
+                <Ellipse.Effect>
+                    <BlurEffect Radius="7"/>
+                </Ellipse.Effect>
+                <Ellipse.Fill>
+                    <RadialGradientBrush>
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#4CFFFFFF" Offset="1"/>
+                        <GradientStop Color="#4C525252" Offset="0.668"/>
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+
+
+
+            <Label Content="STOK ADEDİ" Canvas.Left="482" Canvas.Top="332" Width="90" Background="#FF134187" Foreground="White"/>
+            <TextBox Width="101" Canvas.Left="572" Canvas.Top="332" Height="26"  Style="{DynamicResource MouseOverImageChange_Tetbox}" x:Name="txt_StokAdedi" PreviewTextInput="txt_StokAdedi_PreviewTextInput" />
+            <TextBox Width="101" Canvas.Left="729" Canvas.Top="332" Height="26"  Style="{DynamicResource MouseOverImageChange_Tetbox}"/>
+            <Label Content="Demirbaş No:" Canvas.Left="729" Canvas.Top="306" Width="101" FontSize="9" Foreground="#FF838383"  />
+
+
 
         </Canvas>
 

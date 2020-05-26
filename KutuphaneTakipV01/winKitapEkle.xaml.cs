@@ -23,5 +23,39 @@ namespace KutuphaneTakipV01
         {
             InitializeComponent();
         }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+
+        }
+
+        private void txt_BaskiSayisi_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            if(!char.IsDigit(e.Text,e.Text.Length-1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_SayfaSayisi_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            if (!char.IsDigit(e.Text, e.Text.Length - 1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_StokAdedi_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            if (!char.IsDigit(e.Text, e.Text.Length - 1))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
